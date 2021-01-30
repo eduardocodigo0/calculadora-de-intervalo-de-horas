@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+	<title>Document</title>
+</head>
+<style>
+* {
+	margin: 0;
+	font-family: 'Orbitron', Courier, monospace;
+	max-width: 100% !important;
+}
+
+body {
+	background-color: black;
+	/*background-image: url("https://wallpapercave.com/wp/wp6600254.jpg");*/
+	color: white;
+	width: 100%;
+	position: relative;
+}
+
+h1 {
+	color: white;
+	margin-left: 10px;
+	padding: 0.5%;
+	width: 90%;
+	font-size: 48px;
+}
+
+.img-div {
+	max-width: 100%;
+	display: flex;
+	align-self: baseline;
+}
+
+.img-div img {
+	position: absolute;
+	bottom: 0cm;
+}
+
+.main {
+	margin: 4% auto;
+	width: 80%;
+	text-align: center;
+}
+
+hr {}
+
+.rotulo {
+	font-size: 40px;
+	margin-top: 30px;
+}
+
+.hora-minuto {
+	font-size: 32px;
+	color: palevioletred;
+}
+
+input {
+	width: 100%;
+	text-align: center;
+	font-size: 28px;
+	margin: 20px 0;
+}
+
+#msg {
+	font-size: 32px;
+}
+
+#msg strong {}
+
+#img1 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+}
+
+#img2 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+}
+
+#btn-calcular {
+	margin-top: 30px;
+	font-size: 32px;
+	cursor: pointer;
+	border: palevioletred 3px solid;
+	background-color: black;
+	color: palevioletred;
+}
+
+#btn-calcular:hover {
+	background-color: palevioletred;
+	color: black;
+}
+</style>
+
+<body>
+	<h1>Calculadora de horas</h1>
+	<hr> <img id="img1" src="https://fauux.neocities.org/poopz.gif" alt="" srcset=""> <img id="img2" src="https://giffiles.alphacoders.com/171/171308.gif" alt="" srcset="">
+	<div class="main">
+		<form> <strong class="rotulo">Horário Inicial </strong> </br>
+			</br>
+			<div class="hora-minuto"> Horas:
+				<input maxlength="2" min="0" max="24" id="hr1" type="number" placeholder="HH" /> Minutos:
+				<input maxlength="2" min="0" max="60" id="min1" type="number" placeholder="MM" /> </div>
+			</br>
+			</br> <strong class="rotulo">Horário Final </strong> </br>
+			</br>
+			<div class="hora-minuto"> Horas:
+				<input maxlength="2" min="0" max="24" id="hr2" type="number" placeholder="HH" /> Minutos:
+				<input maxlength="2" min="0" max="60" id="min2" type="number" placeholder="MM" /> </div>
+		</form>
+		<div class="hora-minuto">
+			<button id="btn-calcular">Calcular tempo</button>
+		</div>
+		</br>
+		</br>
+		<h3 id="msg"></h3> </div>
+	<script src="app.js"></script>
+</body>
+
+</html>
